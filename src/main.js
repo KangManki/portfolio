@@ -49,9 +49,18 @@ document.addEventListener('scroll', () =>  {
   // 드림코딩 코드
   let ratio_dream = 1 -  (window.scrollY / homeHeight);  
 
-  // 값은 동일하다.
-
-  console.log(`내가 작성한 ratio - ${ratio} 드림코딩 ratio - ${ratio_dream}`);
+  // 값은 동일하다.  
   home.style.opacity = ratio < 0 ? 0 : ratio;  
   
   });
+
+
+  // 최상단에 있을 경우 애로우 버튼 숨기고, Home 절반이상 이동했을 때 보이기
+  const arrowUp = document.querySelector('.arrow-up');
+  document.addEventListener('scroll', () =>  {
+    let ratio_dream = 1 -  (window.scrollY / homeHeight);  
+
+    arrowUp.style.opacity = ratio_dream > 0.5 ? 0 : 1;
+
+  });
+  
