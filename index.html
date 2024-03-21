@@ -35,6 +35,7 @@
       -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -45,10 +46,18 @@
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a class="header__menu__item active" href="#home">Home</a></li>
-          <li><a class="header__menu__item" href="#about">About</a></li>
-          <li><a class="header__menu__item" href="#skills">Skills</a></li>
-          <li><a class="header__menu__item" href="#work">My work</a></li>
+          <li>
+            <a class="header__menu__item active" href="#home">Home</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#skills">Skills</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#work">My work</a>
+          </li>
           <li>
             <a class="header__menu__item" href="#testimonials">Testimonials</a>
           </li>
@@ -63,7 +72,7 @@
     <!-- Main -->
     <main>
       <!-- Home -->
-      <section id="home">
+      <section id="home" class="section">
         <div class="home__container">
           <img
             class="home__avatar"
