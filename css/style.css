@@ -52,7 +52,7 @@ button  {
 }
 
 button:focus  {
-  outline : 1px solid var(--color-accent);
+  outline : 1px solid transparent;
 }
 
 /* Common */
@@ -118,6 +118,8 @@ button:focus  {
 
 .header__menu__item {
   padding : 8px 16px;
+  display:block;
+  border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -127,6 +129,16 @@ button:focus  {
 .header__menu__item.active  {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
+}
+
+.header__toggle  {
+  display: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  cursor: pointer;
 }
 
 
@@ -476,7 +488,7 @@ button:focus  {
 /* Responsive */
 @media screen and (max-width: 768px) {
   .section  {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .title  {
@@ -490,18 +502,36 @@ button:focus  {
   .header  {
     flex-direction: column;
     align-items: start;
+    background-color: var(--color-primary);
   }
 
-  .header__nav  {
+  .header__logo {
+    display : flex;
+    
+  }
+
+  .header__nav  {    
+    
     width: 100%;
   }
 
-  .header__menu {
+  .header__menu  {    
+    display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+    margin: 1rem 4rem;
     gap: 1rem;
   }
+
+  .header__menu.open  {
+    display: flex;
+  }
+
+  .header__toggle  {
+    display:block;
+  }
+
+  
 
   #home  {
   padding-bottom: 3rem;
