@@ -6,11 +6,6 @@ const navItems = sectionIds.map((id) => document.querySelector(`[href="${id}"]`)
 
 let visibleSections = sectionIds.map(() => false);
 let activeNavItem = navItems[0];
-console.log(sectionIds);
-console.log(sections);
-console.log(navItems);
-console.log(visibleSections);
-
 
 const options = {
   rootMargin: '-20% 0px 0px 0px',
@@ -19,7 +14,6 @@ const options = {
 const observer = new IntersectionObserver(observerCallback, options);
 
 sections.forEach(section => observer.observe(section))
-
 
 function observerCallback(entries)   {
   let selectLastOne;
@@ -30,12 +24,8 @@ function observerCallback(entries)   {
     visibleSections[index] = entry.isIntersecting;
 
     selectLastOne = index === sectionIds.length - 1 && entry.isIntersecting && entry.intersectionRatio >= 0.90;
-    
-    console.log(entry.target);
-    console.log(entry.isIntersecting);
-    console.log(entry.intersectionRatio);
   });
-  console.log(visibleSections);
+  
   const navIndex = selectLastOne ? sectionIds.length - 1 : findFirstIntersection(visibleSections);  
 
   const  navItem = navItems[navIndex];

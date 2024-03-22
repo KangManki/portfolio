@@ -23,6 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/517e8f8ca6.js"
@@ -39,6 +41,7 @@
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -76,20 +79,22 @@
     <main>
       <!-- Home -->
       <section id="home" class="section">
-        <div class="home__container">
+        <div class="max-container home__container">
           <img
             class="home__avatar"
             src="images/profile-removebg-preview.png"
             alt="CONSTANT Profile"
           />
-          <h2 class="home__title">
-            Hello <br />I&#39;m
-            <strong class="home__title__strong">Dream Coder</strong>, Constant
-          </h2>
-          <p class="home_description">
-            Fullstack Software Devloper Constant, In Hwaseung
-          </p>
-          <a class="home__contact" href="#contact">Contact Me</a>
+          <div>
+            <h2 class="home__title">
+              Hello <br />I&#39;m
+              <strong class="home__title__strong">Dream Coder</strong>, Constant
+            </h2>
+            <p class="home_description">
+              Fullstack Software Devloper Constant, In Hwaseung
+            </p>
+            <a class="home__contact" href="#contact">Contact Me</a>
+          </div>
         </div>
       </section>
       <!-- About -->
