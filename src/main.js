@@ -58,3 +58,64 @@ document.addEventListener('scroll', () =>  {
   navbarMenu.addEventListener('click', () =>  {
     navbarMenu.classList.remove('open');
   });
+
+
+
+  // Facebook 내보내기 버튼
+  $(document).on('click', '.btn_facebook', function()  {
+    let gotoUrl = encodeURIComponent(window.location.href),
+    facebook = 'http://www.facebook.com/sharer/sharer.php?u=',
+    link = facebook + gotoUrl;
+
+    window.open(link);
+
+    return false;
+  });
+
+  
+  // X 내보내기 버튼
+  $(document).on('click', '.btn_x-twitter', function()  {
+    let gotoUrl = encodeURIComponent(window.location.href),
+    x_twitter = `http://www.twitter.com/intent/tweet?text=T&url=`,
+    link = x_twitter + gotoUrl;
+
+    window.open(link);
+
+    return false;
+  });
+
+
+  // Line 내보내기 버튼
+  $(document).on('click', '.btn_line', function()  {
+    let gotoUrl = encodeURIComponent(window.location.href),
+    line = `http://social-plugins.line.me/lineit/share?url=`,
+    link = line + gotoUrl;
+
+    window.open(link);
+
+    return false;
+  });
+
+
+  // 카카오톡 내보내기 버튼
+    
+    $(document).on('click', '.btn_kakao', function()  {
+      // js키 초기화
+      
+      
+
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content:  {
+          title : '타이틀명',
+          description: '설명텍스트',
+          imageUrl: `http://127.0.0.1:5501/images/profile-removebg-preview.png`,
+          link:  {
+            mobileWebUrl: `https://info-gateway.com`,
+            webUrl: `https://info-gateway.com`
+          },
+        }
+      });
+    });
+
+    

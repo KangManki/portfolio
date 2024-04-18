@@ -38,9 +38,20 @@
          아래의 HTML Body 문서를 읽어들이게 되어 사용자 로딩이 늦다. 
          defer 옵션을 사용하여 자바스크리브 로딩이 늦더라도 DOMContentLoaded 이벤트 발생을 보장
       -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+      integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Kakao.init(`f4ee8d4cf12b5ecc016eb43683104eb5`);
+    </script>
     <script type="module" src="src/main.js" defer></script>
-    <script type="module" src="src/projects.js" defer></script>
-    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/projects.js" defer>
+      </scrip>
+          <script type="module" src="src/active_menu.js" defer>
+    </script>
     <script type="module" src="src/type.js" defer></script>
   </head>
   <body>
@@ -419,6 +430,20 @@
         <p class="description">constant1022@gmail.com</p>
         <ul class="contact__links">
           <li>
+            <a class="contact__link btn_kakao">
+              <i class="fa-solid fa-cloud"></i>
+            </a>
+
+            <a class="contact__link btn_facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a class="contact__link btn_x-twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a class="contact__link btn_line">
+              <i class="fa-brands fa-line"></i>
+            </a>
+
             <a
               class="contact__link"
               href="https://github.com"
